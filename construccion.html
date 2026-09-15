@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>En construcción · Lecciones de Mamá</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="construction-page">
+  <main class="construction-wrap">
+    <div class="construction-card">
+      <a class="mini-brand" href="index.html">Lecciones de Mamá</a>
+      <div class="construction-icon">🧶</div>
+      <p class="eyebrow" id="section-label">PRÓXIMAMENTE</p>
+      <h1 id="section-title">Esta sección está en construcción</h1>
+      <p>Estoy preparando este rincón con mucho cariño. Muy pronto habrá contenido nuevo.</p>
+      <a class="btn primary" href="index.html">← Volver a la pantalla principal</a>
+    </div>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const section = params.get('seccion');
+    if (section) {
+      document.getElementById('section-label').textContent = section.toUpperCase();
+      document.getElementById('section-title').textContent = section + ' · En construcción';
+      document.title = section + ' · En construcción · Lecciones de Mamá';
+    }
+  </script>
+</body>
+</html>
